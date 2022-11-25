@@ -1,13 +1,20 @@
 package com.example.masangir;
 
+import static com.example.masangir.R.drawable.you;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
 
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
@@ -41,6 +48,7 @@ public class Chat extends AppCompatActivity {
     private TextView createNewTextView(String text) {
         final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         final TextView textView = new TextView(this);
+
         textView.setLayoutParams(lparams);
         textView.setText("New text: " + text);
         return textView;
