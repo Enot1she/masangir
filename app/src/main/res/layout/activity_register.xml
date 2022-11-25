@@ -79,6 +79,7 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
         android:text="создать аккаунт"
+        android:textColor="#0f1f2e"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
