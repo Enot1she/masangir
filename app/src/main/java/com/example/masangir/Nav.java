@@ -15,6 +15,7 @@ import com.example.masangir.databinding.ActivityNavigationBinding;
 public class Nav extends AppCompatActivity {
 
     private ActivityNavigationBinding binding;
+    //6666666
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
