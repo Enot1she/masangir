@@ -21,9 +21,6 @@ import android.view.View;
 import android.widget.TextView;
 
 public class Nav extends AppCompatActivity {
-    private LinearLayout mLayout;
-    private Button mButton;
-    public String text;
 
     private ActivityNavigationBinding binding;
 
@@ -42,17 +39,6 @@ public class Nav extends AppCompatActivity {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_activity_navigation);
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
-
-        mButton = (Button) findViewById(R.id.button);
-
-        mButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(Nav.this, Chat.class);
-                startActivity(intent);
-
-            }
-        });
 
     }
 
