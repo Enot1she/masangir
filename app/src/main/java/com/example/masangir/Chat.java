@@ -50,6 +50,8 @@ public class Chat extends AppCompatActivity {
         final TextView textView = new TextView(this);
 
         textView.setLayoutParams(lparams);
+        textView.setTextColor(getResources().getColor(R.color.black));
+        textView.setTextSize(20);
         textView.setText(text);
         return textView;
     }
