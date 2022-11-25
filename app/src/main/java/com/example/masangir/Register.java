@@ -6,24 +6,47 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class Register extends AppCompatActivity {
 
     public Button btn;
+    public DatabaseReference mDatabase;
+    public int userId = 0;
+    public EditText loginEditText;
+    public EditText passwordEditText;
+    public String login;
+    public String password;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
+        loginEditText = (EditText) findViewById(R.id.loginEditText);
+        passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         btn = (Button) findViewById(R.id.Reg);
+        mDatabase = FirebaseDatabase.getInstance().getReference();
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Register.this, adder.class);
                 startActivity(intent);
+                login = loginEditText.getText().toString();
+                password = passwordEditText.getText().toString();
+                addNewUser(userId, login, password);
+                userId++;
             }
         });
+    }
+
+    public void addNewUser(int userId, String userName, String userPassword){
+        User user = new User(userId, userName, userPassword);
+        mDatabase.child("User").child(Integer.toString(userId)).setValue(user);
+        userId++;
     }
 }

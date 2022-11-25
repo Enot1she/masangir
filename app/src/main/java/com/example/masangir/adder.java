@@ -13,7 +13,7 @@ public class adder extends AppCompatActivity {
     private LinearLayout mLayout;
     private EditText mEditText;
     private Button mButton;
-    public String text = String.valueOf(mEditText.getText());
+    public String text;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -24,6 +24,7 @@ public class adder extends AppCompatActivity {
         mButton = (Button) findViewById(R.id.button);
         TextView textView = new TextView(this);
         textView.setText("New text");
+        text = String.valueOf(mEditText.getText());
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
