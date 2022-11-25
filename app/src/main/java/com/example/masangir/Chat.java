@@ -14,7 +14,7 @@ import android.widget.TextView;
 
 public class Chat extends AppCompatActivity {
 
-    private LinearLayout mLayout;
+    private ConstraintLayout mLayout;
     private EditText mEditText;
     private Button mButton;
 
@@ -22,7 +22,7 @@ public class Chat extends AppCompatActivity {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        mLayout = (LinearLayout) findViewById(R.id.chat);
+        mLayout = (ConstraintLayout) findViewById(R.id.chat);
         mEditText = (EditText) findViewById(R.id.editText);
         mButton = (Button) findViewById(R.id.button);
         TextView textView = new TextView(this);
