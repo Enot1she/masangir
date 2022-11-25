@@ -38,7 +38,7 @@ public class Chat extends AppCompatActivity {
     }
 
     private TextView createNewTextView(String text) {
-        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+        final ConstraintLayout.LayoutParams lparams = new ConstraintLayout.LayoutParams(ConstraintLayout.LayoutParams.WRAP_CONTENT, ConstraintLayout.LayoutParams.WRAP_CONTENT);
         final TextView textView = new TextView(this);
         textView.setLayoutParams(lparams);
         textView.setText("New text: " + text);
