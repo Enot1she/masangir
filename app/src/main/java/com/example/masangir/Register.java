@@ -3,7 +3,9 @@ package com.example.masangir;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Point;
 import android.os.Bundle;
+import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -30,6 +32,8 @@ public class Register extends AppCompatActivity {
         passwordEditText = (EditText) findViewById(R.id.passwordEditText);
         btn = (Button) findViewById(R.id.Reg);
         mDatabase = FirebaseDatabase.getInstance().getReference();
+
+        setTitle(R.string.register_activity);
 
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
