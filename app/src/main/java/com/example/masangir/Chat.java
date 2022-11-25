@@ -22,24 +22,27 @@ import android.widget.TextView;
 
 public class Chat extends AppCompatActivity {
 
-    private LinearLayout mLayout;
+    private LinearLayout mLayout1;
     private EditText mEditText;
     private Button mButton;
+    private LinearLayout mLayout2;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        mLayout = (LinearLayout) findViewById(R.id.chat2);
+
+        mLayout1 = (LinearLayout) findViewById(R.id.chat1);
+        mLayout2 = (LinearLayout) findViewById(R.id.chat2);
         mEditText = (EditText) findViewById(R.id.editText);
         mButton = (Button) findViewById(R.id.button);
-        TextView textView = new TextView(this);
-        textView.setText("New text");
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mLayout.addView(createNewTextView(mEditText.getText().toString()));
+                mLayout1.addView(createNewTextView(mEditText.getText().toString()));
+                mLayout2.addView(createNewTextView(mEditText.getText().toString()));
+//                mLayout.addView(createNewImView());
 
             }
         });
@@ -53,6 +56,17 @@ public class Chat extends AppCompatActivity {
         textView.setTextColor(getResources().getColor(R.color.black));
         textView.setTextSize(20);
         textView.setText(text);
+
         return textView;
     }
+
+//    private ImageView createNewImView() {
+//        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        final ImageView imageView = new ImageView(this);
+//
+//        imageView.setLayoutParams(lparams);
+//        imageView.setImageDrawable(getResources().getDrawable(you));;
+//
+//        return imageView;
+//    }
 }
