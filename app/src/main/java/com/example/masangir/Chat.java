@@ -26,26 +26,48 @@ public class Chat extends AppCompatActivity {
     private EditText mEditText;
     private Button mButton;
     private LinearLayout mLayout2;
+    private String otvet;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
+//        while (true) do{
+//            mLayout2.addView(createNewTextView(otvet.getText().toString()));
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
         mLayout1 = (LinearLayout) findViewById(R.id.chat1);
         mLayout2 = (LinearLayout) findViewById(R.id.chat2);
         mEditText = (EditText) findViewById(R.id.editText);
+//        otvet = (String) с сервака;
         mButton = (Button) findViewById(R.id.button);
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 mLayout1.addView(createNewTextView(mEditText.getText().toString()));
-                mLayout2.addView(createNewTextView(mEditText.getText().toString()));
 //                mLayout.addView(createNewImView());
 
             }
         });
+    }
+
+    public void onResume(Bundle savedInstanceState) {
+        super.onResume();
+//                while (true) do{
+//            mLayout2.addView(createNewTextView(otvet.getText().toString()));
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 
     private TextView createNewTextView(String text) {
