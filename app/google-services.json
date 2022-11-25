@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "188951880190",
+    "firebase_url": "https://hackaton-database-default-rtdb.europe-west1.firebasedatabase.app",
+    "project_id": "hackaton-database",
+    "storage_bucket": "hackaton-database.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:188951880190:android:8366f27cc60e0fde67e0af",
+        "android_client_info": {
+          "package_name": "com.example.masangir"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "188951880190-arb4t8uh7kepfk2mjcvv0j6go6t0ghl0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAM8XiJS3wIzkBA9MdjONRIuTFNKM2WQig"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "188951880190-arb4t8uh7kepfk2mjcvv0j6go6t0ghl0.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
