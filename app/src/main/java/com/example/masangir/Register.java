@@ -34,7 +34,7 @@ public class Register extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Register.this, adder.class);
+                Intent intent = new Intent(Register.this, Nav.class);
                 startActivity(intent);
                 login = loginEditText.getText().toString();
                 password = passwordEditText.getText().toString();

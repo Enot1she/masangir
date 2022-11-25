@@ -7,23 +7,6 @@
     android:layout_height="match_parent"
     android:paddingTop="?attr/actionBarSize">
 
-    <EditText
-        android:id="@+id/editText"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="580dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="143dp"
-        android:layout_height="49dp"
-        android:layout_marginBottom="532dp"
-        android:text="Add+"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
-
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="0dp"
@@ -49,6 +32,15 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/mobile_navigation" />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="143dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="608dp"
+        android:text="Add+"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

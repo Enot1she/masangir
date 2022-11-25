@@ -1,5 +1,6 @@
 package com.example.masangir;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
@@ -21,7 +22,6 @@ import android.widget.TextView;
 
 public class Nav extends AppCompatActivity {
     private LinearLayout mLayout;
-    private EditText mEditText;
     private Button mButton;
     public String text;
 
@@ -30,6 +30,7 @@ public class Nav extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        //Навигационная панель
 
         binding = ActivityNavigationBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
@@ -42,31 +43,17 @@ public class Nav extends AppCompatActivity {
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
         NavigationUI.setupWithNavController(binding.navView, navController);
 
-        // Создание нового чата
-        setContentView(R.layout.activity_navigation);
-        mLayout = (LinearLayout) findViewById(R.id.container);
-        mEditText = (EditText) findViewById(R.id.editText);
         mButton = (Button) findViewById(R.id.button);
-        TextView textView = new TextView(this);
-        textView.setText("New text");
-        text = String.valueOf(mEditText.getText());
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mLayout.addView(createNewTextView(mEditText.getText().toString()));
+                Intent intent = new Intent(Nav.this, Chat.class);
+                startActivity(intent);
 
             }
         });
-    }
 
-    private TextView createNewTextView(String text) {
-        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        final TextView textView = new TextView(this);
-        textView.setLayoutParams(lparams);
-        textView.setText("New text: " + text);
-        return textView;
     }
-
 
 }
