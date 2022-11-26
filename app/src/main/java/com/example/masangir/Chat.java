@@ -42,7 +42,7 @@ public class Chat extends AppCompatActivity {
 //            }
 //        }
 
-        mLayout1 = (LinearLayout) findViewById(R.id.chat1);
+//        mLayout1 = (LinearLayout) findViewById(R.id.chat1);
         mLayout2 = (LinearLayout) findViewById(R.id.chat2);
         mEditText = (EditText) findViewById(R.id.editText);
 //        otvet = (String) с сервака;
@@ -51,7 +51,7 @@ public class Chat extends AppCompatActivity {
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mLayout1.addView(createNewTextView(mEditText.getText().toString()));
+                mLayout2.addView(createNewTextView(mEditText.getText().toString()));
 //                mLayout.addView(createNewImView());
 
             }
