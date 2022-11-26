@@ -45,7 +45,6 @@ public class HomeFragment extends Fragment {
         mFButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Создание чата")
