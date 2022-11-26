@@ -22,27 +22,52 @@ import android.widget.TextView;
 
 public class Chat extends AppCompatActivity {
 
-    private LinearLayout mLayout;
+    private LinearLayout mLayout1;
     private EditText mEditText;
     private Button mButton;
+    private LinearLayout mLayout2;
+    private String otvet;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
-        mLayout = (LinearLayout) findViewById(R.id.chat2);
+
+//        while (true) do{
+//            mLayout2.addView(createNewTextView(otvet.getText().toString()));
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
+
+        mLayout1 = (LinearLayout) findViewById(R.id.chat1);
+        mLayout2 = (LinearLayout) findViewById(R.id.chat2);
         mEditText = (EditText) findViewById(R.id.editText);
+//        otvet = (String) с сервака;
         mButton = (Button) findViewById(R.id.button);
-        TextView textView = new TextView(this);
-        textView.setText("New text");
 
         mButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mLayout.addView(createNewTextView(mEditText.getText().toString()));
+                mLayout1.addView(createNewTextView(mEditText.getText().toString()));
+//                mLayout.addView(createNewImView());
 
             }
         });
+    }
+
+    public void onResume(Bundle savedInstanceState) {
+        super.onResume();
+//                while (true) do{
+//            mLayout2.addView(createNewTextView(otvet.getText().toString()));
+//            try {
+//                Thread.sleep(1000);
+//            } catch (InterruptedException e) {
+//                e.printStackTrace();
+//            }
+//        }
     }
 
     private TextView createNewTextView(String text) {
@@ -50,7 +75,20 @@ public class Chat extends AppCompatActivity {
         final TextView textView = new TextView(this);
 
         textView.setLayoutParams(lparams);
-        textView.setText("New text: " + text);
+        textView.setTextColor(getResources().getColor(R.color.black));
+        textView.setTextSize(20);
+        textView.setText(text);
+
         return textView;
     }
+
+//    private ImageView createNewImView() {
+//        final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
+//        final ImageView imageView = new ImageView(this);
+//
+//        imageView.setLayoutParams(lparams);
+//        imageView.setImageDrawable(getResources().getDrawable(you));;
+//
+//        return imageView;
+//    }
 }

@@ -11,7 +11,7 @@
         android:id="@+id/button"
         android:layout_width="54dp"
         android:layout_height="46dp"
-        android:layout_marginLeft="328dp"
+        android:layout_marginLeft="352dp"
         android:layout_marginBottom="4dp"
         android:text="+"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -19,12 +19,10 @@
 
     <EditText
         android:id="@+id/editText"
-        android:layout_width="300dp"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="16dp"
-        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent" />
+        app:layout_constraintLeft_toLeftOf="parent"/>
 
     <LinearLayout
         android:id="@+id/chat2"
@@ -35,6 +33,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.027"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
