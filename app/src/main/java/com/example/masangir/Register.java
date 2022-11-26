@@ -9,6 +9,7 @@ import android.view.Display;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -38,12 +39,22 @@ public class Register extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(Register.this, Nav.class);
-                startActivity(intent);
-                login = loginEditText.getText().toString();
-                password = passwordEditText.getText().toString();
-                addNewUser(userId, login, password);
-                userId++;
+                if (loginEditText.getText().length() == 0){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Не введён логин", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                else if (passwordEditText.getText().length() == 0){
+                    Toast toast = Toast.makeText(getApplicationContext(), "Не введён пароль", Toast.LENGTH_LONG);
+                    toast.show();
+                }
+                else {
+                    Intent intent = new Intent(Register.this, Nav.class);
+                    startActivity(intent);
+                    login = loginEditText.getText().toString();
+                    password = passwordEditText.getText().toString();
+                    addNewUser(userId, login, password);
+                    userId++;
+                }
             }
         });
     }

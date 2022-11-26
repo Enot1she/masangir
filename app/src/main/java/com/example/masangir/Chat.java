@@ -52,14 +52,15 @@ public class Chat extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 mLayout2.addView(createNewTextView(mEditText.getText().toString()));
+                mEditText.getText().clear();
 //                mLayout.addView(createNewImView());
 
             }
         });
     }
 
-    public void onResume(Bundle savedInstanceState) {
-        super.onResume();
+//    public void onResume(Bundle savedInstanceState) {
+//        super.onResume();
 //                while (true) do{
 //            mLayout2.addView(createNewTextView(otvet.getText().toString()));
 //            try {
@@ -68,7 +69,7 @@ public class Chat extends AppCompatActivity {
 //                e.printStackTrace();
 //            }
 //        }
-    }
+//    }
 
     private TextView createNewTextView(String text) {
         final LinearLayout.LayoutParams lparams = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
@@ -77,7 +78,7 @@ public class Chat extends AppCompatActivity {
         textView.setLayoutParams(lparams);
         textView.setTextColor(getResources().getColor(R.color.black));
         textView.setTextSize(20);
-        textView.setText(text);
+        textView.setText("Alex. Gon. \n" + text);
 
         return textView;
     }

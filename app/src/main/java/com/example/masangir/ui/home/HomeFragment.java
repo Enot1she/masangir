@@ -48,7 +48,7 @@ public class HomeFragment extends Fragment {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Создание чата")
-                        .setMessage("Как назвать чат?")
+                        .setMessage("Создание чата 1")
                         .setPositiveButton("Создать", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // Закрываем диалоговое окно
