@@ -48,8 +48,8 @@ public class HomeFragment extends Fragment {
 
                 AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
                 builder.setTitle("Создание чата")
-                        .setMessage("Покормите кота!")
-                        .setPositiveButton("ОК, иду на кухню", new DialogInterface.OnClickListener() {
+                        .setMessage("Как назвать чат?")
+                        .setPositiveButton("Создать", new DialogInterface.OnClickListener() {
                             public void onClick(DialogInterface dialog, int id) {
                                 // Закрываем диалоговое окно
                                 Intent intent = new Intent(HomeFragment.this.getContext(), Chat.class);
