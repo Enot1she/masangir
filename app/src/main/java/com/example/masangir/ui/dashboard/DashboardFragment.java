@@ -25,7 +25,7 @@ public class DashboardFragment extends Fragment {
         View root = binding.getRoot();
 
         final TextView textView = binding.textDashboard;
-        dashboardViewModel.getText().observe(getViewLifecycleOwner(), textView::setText);
+        textView.setText("Скоро здесь будут Ваши стикеры :)");
         return root;
     }
 

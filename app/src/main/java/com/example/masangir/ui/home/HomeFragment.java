@@ -16,10 +16,11 @@ import com.example.masangir.Chat;
 import com.example.masangir.Nav;
 import com.example.masangir.R;
 import com.example.masangir.databinding.FragmentHomeBinding;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class HomeFragment extends Fragment {
-    private Button mButton;
 
+    private FloatingActionButton mFButton;
     private FragmentHomeBinding binding;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -30,9 +31,9 @@ public class HomeFragment extends Fragment {
         binding = FragmentHomeBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
-        mButton = (Button) root.findViewById(R.id.button);
+        mFButton = (FloatingActionButton) root.findViewById(R.id.floating_action_button);
 
-        mButton.setOnClickListener(new View.OnClickListener() {
+        mFButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(HomeFragment.this.getContext(), Chat.class);
@@ -40,7 +41,6 @@ public class HomeFragment extends Fragment {
 
             }
         });
-
         return root;
     }
 
