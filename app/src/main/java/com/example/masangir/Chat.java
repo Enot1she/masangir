@@ -22,11 +22,11 @@ import android.widget.TextView;
 
 public class Chat extends AppCompatActivity {
 
-    private LinearLayout mLayout1;
+//    private LinearLayout mLayout1;
     private EditText mEditText;
     private Button mButton;
     private LinearLayout mLayout2;
-    private String otvet;
+//    private String otvet;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
